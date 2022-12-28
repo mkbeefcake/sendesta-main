@@ -1,0 +1,110 @@
+{% extends "dashboard/base.html" %}
+{% block content %} {% load static %}
+<style media="screen">
+  .company-row {
+    padding: 2%;
+  }
+
+  .yourcompanyinfo {
+    padding-top: 5%;
+    padding: 2%;
+    padding-bottom: -5%;
+  }
+</style>
+
+<div class="page-wrapper">
+  <div class="row">
+    <div class="yourcompanyinfo">
+      <div class="col-md-12">
+        <h4 class="d-inline">Update Your Company Information</h4>
+        <p class="text-muted m-t-0">See All Of Your Business Credit Information Below</p>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="company-row">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Current Business Address: {{company.business_address}}</h4>
+                <p class="card-text">Update Business Address By Putting In Your Information Below</p>
+                <form class="m-t-25">
+                  <div class="form-group">
+                    <input type="text" class="form-control" value="{{company.business_address}}">
+                  </div>
+                </form>
+                <a href="javascript:void(0)" class="btn btn-primary">Update Information</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Annual Sales: {{company.anual_sales}}</h4>
+                <p class="card-text">Update Annual Sales By Putting In Your Information Below</p>
+                <form class="m-t-25">
+                  <div class="form-group">
+                    <input type="text" class="form-control" value="{{company.anual_sales}}">
+                  </div>
+                </form>
+                <a href="javascript:void(0)" class="btn btn-primary">Update Information</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Current Business Phone Number:{{company.telephone}} </h4>
+                <p class="card-text">Update Current Business Phone Number By Putting In Your Information Below</p>
+                <form class="m-t-25">
+                  <div class="form-group">
+                    <input type="text" class="form-control" value="{{company.telephone}}">
+                  </div>
+                </form>
+                <a href="javascript:void(0)" class="btn btn-primary">Update Information</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="company-row">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Current Number Of Employees: {{company.employees}} Employees</h4>
+              <p class="card-text">Update Your Current Number Of Employees By Putting In Your Information Below</p>
+              <form class="m-t-25">
+                <div class="form-group">
+                  <input type="text" class="form-control" value="{{company.employees}}">
+                </div>
+              </form>
+              <a href="javascript:void(0)" class="btn btn-primary">Update Information</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Current Line Of Business: {{company.line_of_business}}</h4>
+              <p class="card-text">Update Current Line Of Business By Putting In Your Information Below</p>
+              <form class="m-t-25">
+                <div class="form-group">
+                  <input type="text" class="form-control" value="{{company.line_of_business}}">
+                </div>
+              </form>
+              <a href="javascript:void(0)" class="btn btn-primary">Update Information</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Card -->
+</div>
+{% endblock content %}
